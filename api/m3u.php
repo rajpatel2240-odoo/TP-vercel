@@ -19,7 +19,7 @@ foreach ($channels as $entry) {
     
     $mpd = isset($entry['streamData']['initialUrl']) ? $entry['streamData']['initialUrl'] : '';
     $extension = pathinfo($mpd, PATHINFO_EXTENSION);
-    $license_key_url = "https://$serverAddress/$id.key";
+    $license_key_url = "https://cdn.babel-in.xyz/tpck/index.php?id=$id";
 
     // Generate playlist entry
     $inus_data .= '#EXTINF:-1 tvg-id="' . $id . '" tvg-logo="' . $logo . '" group-title="' . $genre . '", ' . $name . PHP_EOL;
